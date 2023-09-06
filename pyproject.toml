@@ -10,6 +10,9 @@ readme = "README.md"
 python = "^3.10.1"
 click = "*"
 importlib-metadata = "^4.8.0"
+streamlit = "^1.26.0"
+agent-smith-ai = "^0.13.0"
+logging = "^0.4.9.6"
 
 [tool.poetry.group.dev.dependencies]
 pytest = {version = ">=7.1.2"}
