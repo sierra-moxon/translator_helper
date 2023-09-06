@@ -3,8 +3,8 @@ import logging
 
 import click
 
-from {{ cookiecutter.project_name|lower()|replace(' ', '_')|replace('-', '_') }} import __version__
-from {{ cookiecutter.project_name|lower()|replace(' ', '_')|replace('-', '_') }}.main import demo
+from translator_helper import __version__
+from translator_helper.main import demo
 
 __all__ = [
     "main",
