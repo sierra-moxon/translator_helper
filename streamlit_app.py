@@ -20,21 +20,21 @@ def initialize_session_state():
     st.session_state.setdefault("ui_disabled", False)
     st.session_state.setdefault("lock_widgets", False)
 
-    greeting = """I'm the Monarch Assistant, an AI chatbot with access to the [Monarch Inititive](https://next.monarchinitiative.org) biomedical knowledgebase. I can search for information on diseases, genes, and phenotypes. Here are some things you might try asking:
+    greeting = """I'm the Gene Ontology Consortium Assistant, an AI chatbot with access to the [Gene Ontology Consortium](https://geneontology.org) knowledgebase. I can search for information on gene function, biological processes, and cellular components. Here are some things you might try asking:
 
-- What is the genetic basis of Cystic Fibrosis?
-- What symptoms are associated with Fanconi Anemia?"""
+- Tell me about cellular component disassembly?
+- What are synonyms for cellular component disassembly?"""
 
     if "agents" not in st.session_state:
         st.session_state.agents = {
-            "GO Assistant": {
+            "GO Assistant (GPT-3.5)": {
                 "agent": GoAPIAgent("GO Assistant", model="gpt-3.5-turbo-16k-0613",
                                       openai_api_key=get_current_api_key_for_agent_use()),
                 "greeting": greeting,
                 "avatar": "https://avatars.githubusercontent.com/u/5161984?s=200&v=4",
                 "user_avatar": "👤",
             },
-            "Monarch Assistant (GPT-4)": {
+            "GO Assistant (GPT-4)": {
                 "agent": GoAPIAgent("GO Assistant (GPT-4)", model="gpt-4-0613",
                                       openai_api_key=get_current_api_key_for_agent_use()),
                 "greeting": greeting,

@@ -37,8 +37,7 @@ class GoAPIAgent(UtilityAgent):
         ## the openapi.json spec must be available at the spec_url:
         ##    callable endpoints must have a "description" and "operationId"
         ##    params can be in body or query, but must be fully specified
-        self.register_api("geneontology",
-                          spec_url="https://0.0.0.0:8080/openapi.json",
-                          base_url="https://0.0.0.0:8080/",
-                          callable_endpoints=['get_bioentity_by_id',
-                                              'get_term_metadata_by_id'])
+        self.register_api(name="geneontology",
+                          spec_url="http://0.0.0.0:8080/openapi.json",
+                          base_url="http://0.0.0.0:8080/",
+                          callable_endpoints=['get_term_metadata_by_id_api_ontology_term__id__get'])
